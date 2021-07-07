@@ -1,0 +1,52 @@
+<mat-drawer-container  class="example-container" autosize>
+
+
+
+    <!-- Sidebar  -->
+    
+      <mat-drawer  style="background-color: #F7F7F7;" #drawer class="example-sidenav" mode="side">
+     <nav id="sidebar">
+        <div class="sidebar-header">
+            <h2>Studek Admin</h2>
+        </div>
+
+        <ul class="list-unstyled components">
+           
+            <li routerLinkActive="active">
+               
+                <a ><mat-icon style="vertical-align:middle; margin-right: 5px; margin-bottom: 5px;" aria-label="toggle icon">school</mat-icon>Cursos</a>
+            </li>
+            <li routerLinkActive="active">
+                <a ><mat-icon style="vertical-align:middle; margin-right: 5px; margin-bottom: 5px;" aria-label="toggle icon">note_alt</mat-icon>Matérias</a>
+            </li>
+            <li routerLinkActive="active">
+                <a ><mat-icon style="vertical-align:middle; margin-right: 5px; margin-bottom: 5px;" aria-label="toggle icon">person</mat-icon>Alunos</a>
+            </li>
+            <li routerLinkActive="active">
+                <a ><mat-icon style="vertical-align:middle; margin-right: 5px; margin-bottom: 5px;" aria-label="toggle icon">manage_accounts</mat-icon>Usuários</a>
+            </li>
+            <li routerLinkActive="active">
+            
+                <a routerLink="/login"><mat-icon style="vertical-align:middle; margin-right: 5px; margin-bottom: 5px;" aria-label="toggle icon">logout</mat-icon>sair</a>
+                  
+             </li>
+        </ul>
+     </nav>
+    </mat-drawer>
+   
+        <mat-toolbar color="primary">
+            <button [ngStyle]="{'color':'transparent'}" style="background-color: transparent; border-color: transparent;" type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+              <mat-icon [ngStyle]="{'color':'white'}" aria-label="Side nav toggle icon">menu</mat-icon>
+            </button>
+        </mat-toolbar>
+        <ng-content></ng-content>
+ 
+    <!-- Page Content  -->
+    <div id="content" autosize>
+
+        <router-outlet></router-outlet>
+   
+    </div>
+
+
+</mat-drawer-container>

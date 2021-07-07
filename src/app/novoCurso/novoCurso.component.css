@@ -1,0 +1,7 @@
+/* Add application styles & imports to this file! */
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
+
+.upload {
+  width: 300px;
+  margin: 30px auto;
+}

@@ -1,0 +1,17 @@
+<div class="login-page">
+  <div class="form" >
+    <form  *ngIf="show"  >
+      <input type="text" placeholder="name"/>
+      <input type="password" placeholder="password"/> 
+      <input type="text" placeholder="email address"/>
+      <button>create</button>
+      <p easeInOut class="message">Already registered? <a (click)="toggle()">Sign In</a></p>
+    </form>
+    <form *ngIf="!show"  >
+      <input   type="text" placeholder="username"/> 
+      <input type="password" placeholder="password"/>
+      <button (click)="newChange()">login</button>
+      <p   class="message">Not registered? <a (click)="toggle()">Create an account</a></p>
+    </form>
+  </div>
+</div>
